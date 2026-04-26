@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyeongJun (MJ) Kim | Portfolio</title>
+    <style>
+        :root {
+            --primary-color: #2c3e50; /* 어두운 네이비 */
+            --accent-color: #2980b9;  /* 신뢰감 있는 블루 */
+            --bg-body: #ebedef;      /* 전체 배경 회색 */
+            --bg-card: #ffffff;      /* 섹션 배경 하양 */
+            --text-main: #2c3e50;
+            --text-sub: #546e7a;
+        }
+
+        body {
+            font-family: 'Times New Roman', 'Malgun Gothic', serif;
+            margin: 0; padding: 0; line-height: 1.6;
+            background-color: var(--bg-body);
+            color: var(--text-main);
+        }
+
+        /* 큰 틀: 헤더 영역 */
+        header {
+            background: var(--primary-color);
+            color: white;
+            padding: 4rem 1rem;
+            text-align: center;
+            border-bottom: 5px solid var(--accent-color);
+        }
+
+        header h1 { margin: 0; font-size: 3rem; letter-spacing: 2px; }
+        header p { margin: 10px 0 0; font-size: 1.2rem; opacity: 0.9; }
+
+        .container {
+            max-width: 1000px;
+            margin: -40px auto 50px; /* 헤더 위로 살짝 겹치게 배치 */
+            padding: 0 20px;
+        }
+
+        /* 탭 내비게이션 틀 */
+        .tab-menu {
+            display: flex;
+            justify-content: center;
+            gap: 2px;
+            margin-bottom: 0;
+        }
+
+        .tab-button {
+            padding: 15px 30px;
+            border: none;
+            background: #d1d8e0;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 1rem;
+            color: var(--text-main);
+            border-radius: 8px 8px 0 0;
+            transition: all 0.3s ease;
+        }
+
+        .tab-button:hover { background: #b2bec3; }
+        .tab-button.active {
+            background: var(--bg-card);
+            color: var(--accent-color);
+            padding-top: 12px;
+            border-top: 4px solid var(--accent-color);
+        }
+
+        /* 콘텐츠 섹션 공통 스타일 */
+        .tab-content, .list-section {
+            background: var(--bg-card);
+            padding: 40px;
+            border-radius: 0 0 8px 8px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+        }
+
+        .list-section { border-radius: 8px; margin-top: 20px; }
+
+        h2 {
+            font-size: 1.5rem;
+            color: var(--primary-color);
+            border-left: 5px solid var(--accent-color);
+            padding-left: 15px;
+            margin-bottom: 25px;
+            text-transform: uppercase;
+        }
+
+        /* 경력 사항 타임라인 틀 */
+        .timeline-item {
+            display: flex;
+            margin-bottom: 30px;
+            position: relative;
+        }
+
+        .year {
+            min-width: 140px;
+            font-weight: bold;
+            color: var(--accent-color);
+            font-size: 1.1rem;
+        }
+
+        .job-details {
+            padding-left: 20px;
+            border-left: 1px solid #ddd;
+        }
+
+        .job-details strong { font-size: 1.25rem; display: block; margin-bottom: 5px; }
+
+        .sub-points {
+            margin: 10px 0 0 20px;
+            padding: 0;
+            color: var(--text-sub);
+        }
+
+        /* 기술 태그 스타일 */
+        .skill-container { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 30px; }
+        .skill-tag {
+            background: #f1f2f6;
+            color: var(--primary-color);
+            padding: 8px 16px;
+            border-radius: 5px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            border: 1px solid #dfe4ea;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px 0;
+            color: #7f8c8d;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            .timeline-item { flex-direction: column; }
+            .job-details { border-left: none; padding-left: 0; padding-top: 10px; border-top: 1px solid #eee; }
+            .tab-button { padding: 10px 15px; font-size: 0.9rem; }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>MyeongJun (MJ) KIM</h1>
+    <p>Quality Assurance Evaluator | Attorney at Law (Pending Admission)</p>
+    <div style="margin-top:15px; font-size: 1rem; opacity: 0.8;">
+        mjkim.bhs@gmail.com | Pyeongtaek-si, Gyeonggi-do, Republic of Korea
+    </div>
+</header>
+
+<div class="container">
+    <div class="tab-menu">
+        <button class="tab-button active" onclick="openTab(event, 'about_ko')">자기소개 (KR)</button>
+        <button class="tab-button" onclick="openTab(event, 'about_en')">About Me (EN)</button>
+    </div>
+
+    <div id="about_ko" class="tab-content active">
+        <h2>요약</h2>
+        <p><strong>미 육군 기업 인증 표준(Army Enterprise Accreditation Standard) 및 규제 준수 분야에서</strong> 풍부한 경험을 쌓은 전문가입니다. 특히 군사 및 조직 분석 프레임워크인 <strong>DOTMLPF-P</strong>를 활용하여 조직의 성과를 다각도에서 분석하고 인적 자원의 효율성을 최적화하는 데 탁월한 역량을 보유하고 있습니다.</p>
+        <p><strong>변호사 시험(Washington D.C. Bar, 임용 대기중)</strong> 합격 후 법률적 전문성까지 겸비하여 품질 보증(QA)은 물론 법적 리스크 관리와 행정적 무결성 확보에 기여하고 있습니다. 한·영 이중언어 능력을 바탕으로 다국적 환경에서의 원활한 커뮤니케이션과 법적 자문이 가능합니다.</p>
+    </div>
+
+    <div id="about_en" class="tab-content">
+        <h2>Professional Summary</h2>  
+        <p>Dedicated professional with extensive experience in workforce performance evaluation and institutional accreditation. Expert in ensuring program alignment with rigorous <strong>US Army Enterprise Accreditation Standard</strong> and interpreting complex higher-echelon directives. Proven track record in independently leading comprehensive evaluations of courseware and personnel, identifying discrepancies, and validating quality standards.</p>
+    </div>
+
+    <section class="list-section">
+        <h2>Work Experience</h2>
+        <div class="timeline-item">
+            <div class="year">2021 - Present</div>
+            <div class="job-details">
+                <strong>Senior Quality Assurance Evaluator</strong>
+                <ul class="sub-points">
+                    <li>Regulatory Compliance Oversight</li>
+                    <li>Factual Reviews</li>
+                    <li>EEO Counselor & Providing Advisory Opinions</li>
+                    <li>Knowledge & Record Management</li>
+                </ul>
+            </div>
+        </div>
+        <div class="timeline-item">
+            <div class="year">2018 - 2021</div>
+            <div class="job-details">
+                <strong>Administrative Support Assistant</strong>
+                <ul class="sub-points">
+                    <li>Interpretation Services & Calendar Management</li>
+                    <li>Record Management</li>
+                    <li>Government Purchase Card (GPC) Program Management</li>
+                </ul>
+            </div>
+        </div>
+        <div class="timeline-item">
+            <div class="year">2015 - 2017</div>
+            <div class="job-details">
+                <strong>Military Police Interpreter (KATUSA)</strong>
+                <ul class="sub-points">
+                    <li>Professional Interpretation & Translation Services</li>
+                    <li>Criminal Case (ALERTS) and Record Management</li>
+                    <li>Defense Biometric Identification System (DBIDS) Operator</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="list-section">
+        <h2>Expertise & Skills</h2>
+        <div class="skill-container">
+            <div class="skill-tag">Legal Research Certificate (Westlaw)</div>
+            <div class="skill-tag">Crucial Conversation</div>
+            <div class="skill-tag">Quality Assurance (QA)</div>
+            <div class="skill-tag">EEO Counseling</div>
+            <div class="skill-tag">Bilingual (Korean/English)</div>
+            <div class="skill-tag">Knowledge Management</div>
+        </div>
+        
+        <h2 style="border-left-color: #7f8c8d; margin-top: 40px;">Certificates & Licenses</h2>
+        <ul style="line-height: 2.2; color: var(--text-sub);">
+            <li><strong>Washington D.C. Attorney at Law</strong> (Pending Admission)</li>
+            <li><strong>US Army Quality Assurance Senior Evaluator</strong></li> 
+            <li><strong>US Army Knowledge Management</strong> Qualification</li>
+            <li><strong>Kirkpatrick Evaluator</strong> Certificate (Bronze Level)</li>
+            <li><strong>International Interpretation and Translation Certificate (ITT)</strong></li>
+        </ul>
+    </section>
+
+    <section class="list-section">
+        <h2>Education</h2>
+        <div style="margin-bottom: 15px;">
+            <strong style="font-size: 1.1rem;">University of Dayton School of Law</strong><br>
+            <span style="color: var(--text-sub);">Master of Laws (LL.M)</span>
+        </div>
+        <div style="margin-bottom: 15px;">
+            <strong style="font-size: 1.1rem;">University of Alaska Fairbanks</strong><br>
+            <span style="color: var(--text-sub);">Master of Security and Disaster Management (MSDM)</span>
+        </div>
+        <div>
+            <strong style="font-size: 1.1rem;">University of Alaska Anchorage</strong><br>
+            <span style="color: var(--text-sub);">Bachelor of Science (BS)</span>
+        </div>
+    </section>
+</div>
+
+<footer>
+    &copy; 2026 MyeongJun Kim. All Rights Reserved.
+</footer>
+
+<script>
+    function openTab(evt, tabName) {
+        var i, tabcontent, tablinks;
+        tabcontent = document.getElementsByClassName("tab-content");
+        for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+            tabcontent[i].classList.remove("active");
+        }
+        tablinks = document.getElementsByClassName("tab-button");
+        for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].classList.remove("active");
+        }
+        document.getElementById(tabName).style.display = "block";
+        document.getElementById(tabName).classList.add("active");
+        evt.currentTarget.classList.add("active");
+    }
+</script>
+
+</body>
+</html>
